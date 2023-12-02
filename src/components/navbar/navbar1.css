@@ -1,0 +1,167 @@
+.futurex__navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 2rem 6rem;
+    position: fixed;
+    /* top: 0; */
+    background-color: var();
+    height: 50px;
+    width: 100%;
+}
+
+.futurex__navbar-links {
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.futurex__navbar-links_logo {
+    margin-right: 10rem;
+}
+.futurex__navbar-links_logo h1 {
+    color: #fff;
+    cursor: pointer;
+}
+/* .futurex__navbar-links_logo h1 span {
+    color: #9F0D7F;
+} */
+.futurex__navbar-links_container {
+    display: flex;
+    flex-direction: row;
+}
+
+.futurex__navbar-exhibitions {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.futurex__navbar-exhibitions button {
+    background-color: var(--button2-color);
+    padding: 0.75rem 2rem;
+    border: 0;
+    margin: 0 0.8rem;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: 900;
+    color: whitesmoke;
+    outline: none;
+}
+.futurex__navbar-exhibitions button:hover {
+    background-color: whitesmoke;
+    color: var(--color-hover);
+}
+
+.futurex__navbar-links_container p,
+.futurex__navbar-exhibitions p {
+    color: aliceblue;
+    font-family: var(--font-family);
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 25px;
+    text-transform: capitalize;
+
+    margin: 0 1rem;
+    cursor: pointer;
+}
+.futurex__navbar-links_container p:hover,
+.futurex__navbar-links_container p a:hover {
+    color: var(--color-hover);
+}
+
+/* implementing the hamburger icon */
+
+.futurex__navbar-menu {
+    margin-left: 1rem;
+
+    display: none;
+    position: relative;
+}
+.futurex__navbar-menu svg {
+    cursor: pointer;
+}
+
+.futurex__navbar-menu_container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-end;
+    flex-direction: column;
+
+    text-align: end;
+    background: var(--color-footer);
+    padding: 2rem;
+    position: absolute;
+    top: 40px;
+    right: 0;
+    margin-top: 1rem;
+    min-width: 210px;
+    border-radius: 5px;
+    box-shadow: 0 0 5 rgba(0, 0, 0, 0.2);
+}
+
+.futurex__navbar-menu_container p {
+    margin: 1rem 0;
+}
+
+.futurex__navbar-menu_container-links-exhibitions {
+    display: none;
+}
+.futurex__navbar-menu_container-links-exhibitions button {
+    background-color: var(--button2-color);
+    padding: 0.75rem 2rem;
+    border: 0;
+    margin: 0 0.8rem;
+    border-radius: 2px;
+    cursor: pointer;
+    font-family: var(--font-family);
+    font-weight: 900;
+    color: whitesmoke;
+    outline: none;
+}
+
+@media screen and (max-width: 1050px) {
+    .futurex__navbar-links_container {
+        display: none;
+    }
+
+    .futurex__navbar-menu {
+        display: flex;
+        color: white;
+    }
+    .futurex__navbar-menu p:hover {
+        color: var(--color-hover);
+    }
+    .futurex__navbar-menu_container {
+        display: block;
+        background-color: var(--color-footer);
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .futurex__navbar {
+        padding: 2rem 4rem;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .futurex__navbar {
+        padding: 2rem;
+    }
+
+    .futurex__navbar-exhibitions {
+        display: none;
+    }
+
+    .futurex__navbar-menu_container {
+        top: 20px;
+    }
+
+    .futurex__navbar-menu_container-links-exhibitions {
+        display: block;
+    }
+}
+
+
