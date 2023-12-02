@@ -1,0 +1,173 @@
+.futurex_speakers{
+    background-color: var(--color-bg);
+    padding: 0 2rem 2rem 12rem;
+
+}
+.futurex_speakers-card_heading {
+    margin-bottom: 3rem;
+    display: flex;
+    justify-content: center;
+    font-family: var(--font-family);
+}
+.futurex_speakers-card_heading h1{
+    text-align: center;
+    font-weight: 900;
+    font-size: 2.6rem;
+
+}
+
+.futurex_speakers_{
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 3rem;
+}
+.futurex_speakers-card {
+    width: 30%;
+    text-align: center;
+    font-family: var(--font-family);
+} 
+
+
+.futurex_speakers-card_speaker {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+}
+
+.futurex_speakers-card_speaker-img {
+    width: 236px;
+    height: 236px;
+    -o-object-fit: contain;
+    object-fit: contain;
+    display: block !important;
+    transition: .2s ease-in-out;
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.15);
+}
+.futurex_speakers-card_speaker-img img{
+    width: 100%;
+    overflow: hidden;
+    border-radius: 50%;
+}
+/* Make it move forward on hover by adding shadows */
+.futurex_speakers-card_speaker-img:hover {
+    transform: translateZ(10px);
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.3);
+}
+
+
+.futurex_speakers-card_speaker-profilelink {
+    position: absolute;
+    top: 8px;
+    right: 35px;
+    background-color: #3617e6;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    z-index: 2;
+
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+}
+.futurex_speakers-card_speaker-profilelink svg{
+    width: 17px;
+    height: 17px;
+    border-radius: 50%;
+    text-align: center;
+}
+.futurex_speakers-card_speaker:hover .futurex_speakers-card_speaker-profilelink {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.futurex_speakers-card_speaker-company:before {
+    content: "";
+    position: absolute;
+    z-index: 2;
+    border-radius: 50%;
+    top: -17px;
+    left: 50%;
+    width: 80%;
+    height: 136px;
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    background-color: var(--color-bg);
+}
+
+.futurex_speakers-card_speaker-company {
+    width: 100%;
+    height: 50px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: -20px;
+    z-index: 2;
+}
+.futurex_speakers-card_speaker-company img{
+    position: relative;
+    z-index: 3;
+    margin-top: -10px;
+    max-width: 94px;
+    max-height: 40px;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+
+.futurex_speakers-card-name:before {
+    content: "";
+    position: absolute;
+    top: -35px; /* Position it 20px above the name */
+    left: 50%; /* Horizontally align to the middle */
+    transform: translateX(-50%); /* Center horizontally */
+    width: 80%;
+    height: 2px;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+}
+
+.futurex_speakers-card-name {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    font-weight: 900;
+    /* padding-top: 20px; */
+}
+
+.futurex_speakers-card-job {
+    width: 100%;
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    padding-top: 20px;
+}
+
+/* 4. Add responsiveness max for 1050px, 750px and 550px */
+@media (max-width: 1050px) {
+    .futurex_speakers {
+        padding: 0 1.5rem 1.5rem 10rem;
+    }
+}
+
+@media (max-width: 750px) {
+    .futurex_speakers {
+        padding: 0 1rem 1rem 7rem;
+    }
+}
+
+@media (max-width: 550px) {
+    .futurex_speakers {
+        padding: 0 0.5rem 0.5rem 4rem;
+    }
+}
+
